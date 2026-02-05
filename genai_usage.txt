@@ -1,0 +1,169 @@
+I used an AI prompt for the HTML outline of the resume: 
+
+You said:
+write me the html code for a template resume that i can plug into the body of a webpage\
+ChatGPT said:
+Absolutely! Here's a clean, minimal HTML template for a resume that you can drop directly into the <body> of your webpage. I’ve included sections for your name, contact info, summary, education, experience, and skills. You can easily customize it with your own content:
+
+<div style="max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif; line-height: 1.5; color: #333; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9;">
+  
+  <!-- Name and Contact -->
+  <header style="text-align: center; margin-bottom: 20px;">
+    <h1 style="margin: 0; font-size: 2.5em;">Your Name</h1>
+    <p style="margin: 5px 0;">Email: <a href="mailto:your.email@example.com">your.email@example.com</a> | Phone: (123) 456-7890 | Location: City, State</p>
+    <p style="margin: 5px 0;">LinkedIn: <a href="#">linkedin.com/in/yourprofile</a> | GitHub: <a href="#">github.com/yourusername</a></p>
+  </header>
+
+  <!-- Summary -->
+  <section style="margin-bottom: 20px;">
+    <h2 style="border-bottom: 2px solid #333; padding-bottom: 5px;">Summary</h2>
+    <p>Motivated professional with [X years] of experience in [industry/field]. Skilled in [key skills], with a strong background in [specific expertise].</p>
+  </section>
+
+  <!-- Education -->
+  <section style="margin-bottom: 20px;">
+    <h2 style="border-bottom: 2px solid #333; padding-bottom: 5px;">Education</h2>
+    <div>
+      <h3 style="margin: 0;">University Name</h3>
+      <p style="margin: 2px 0;">Degree, Major — Graduation Year</p>
+      <p style="margin: 2px 0;">Relevant Coursework: [Course 1, Course 2, Course 3]</p>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section style="margin-bottom: 20px;">
+    <h2 style="border-bottom: 2px solid #333; padding-bottom: 5px;">Experience</h2>
+    <div style="margin-bottom: 10px;">
+      <h3 style="margin: 0;">Job Title – Company Name</h3>
+      <p style="margin: 2px 0; font-style: italic;">Start Date – End Date</p>
+      <ul style="margin: 5px 0 0 20px;">
+        <li>Responsibility or achievement #1</li>
+        <li>Responsibility or achievement #2</li>
+        <li>Responsibility or achievement #3</li>
+      </ul>
+    </div>
+    <div style="margin-bottom: 10px;">
+      <h3 style="margin: 0;">Job Title – Company Name</h3>
+      <p style="margin: 2px 0; font-style: italic;">Start Date – End Date</p>
+      <ul style="margin: 5px 0 0 20px;">
+        <li>Responsibility or achievement #1</li>
+        <li>Responsibility or achievement #2</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <h2 style="border-bottom: 2px solid #333; padding-bottom: 5px;">Skills</h2>
+    <p>[Skill 1, Skill 2, Skill 3, Skill 4, Skill 5]</p>
+  </section>
+
+</div>
+✅ Features:
+
+Fully self-contained; drop it into your webpage body.
+
+Uses inline CSS for simplicity (no external stylesheet needed).
+
+Responsive-ish for standard screens.
+
+Easy to customize sections and styling.
+
+If you want, I can also make a more modern, styled version with columns for skills and experience, hover effects, and better typography, which looks closer to a professional resume template online.
+
+Do you want me to do that?
+
+You said:
+use bootstrap to help format it
+ChatGPT said:
+Perfect! Using Bootstrap will make your resume look clean and responsive without manually writing a lot of CSS. Here’s a Bootstrap-based resume template that you can plug directly into the <body> of your webpage. I’m assuming Bootstrap 5 is included in your project (if not, I’ll show the CDN link too).
+
+<!-- Bootstrap 5 CDN (place in <head> if not already included) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container my-5">
+  <div class="card shadow-sm">
+    <div class="card-body">
+
+      <!-- Name and Contact -->
+      <div class="text-center mb-4">
+        <h1 class="card-title mb-1">Your Name</h1>
+        <p class="mb-1">
+          <a href="mailto:your.email@example.com">your.email@example.com</a> | (123) 456-7890 | City, State
+        </p>
+        <p>
+          <a href="#">LinkedIn</a> | <a href="#">GitHub</a>
+        </p>
+      </div>
+
+      <!-- Summary -->
+      <section class="mb-4">
+        <h4 class="mb-2 border-bottom pb-1">Summary</h4>
+        <p>Motivated professional with [X years] of experience in [industry/field]. Skilled in [key skills], with a strong background in [specific expertise].</p>
+      </section>
+
+      <!-- Education -->
+      <section class="mb-4">
+        <h4 class="mb-2 border-bottom pb-1">Education</h4>
+        <div class="mb-2">
+          <h5 class="mb-0">University Name</h5>
+          <small class="text-muted">Degree, Major — Graduation Year</small>
+          <p class="mb-0">Relevant Coursework: [Course 1, Course 2, Course 3]</p>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="mb-4">
+        <h4 class="mb-2 border-bottom pb-1">Experience</h4>
+
+        <div class="mb-3">
+          <h5 class="mb-0">Job Title – Company Name</h5>
+          <small class="text-muted">Start Date – End Date</small>
+          <ul class="mt-1">
+            <li>Responsibility or achievement #1</li>
+            <li>Responsibility or achievement #2</li>
+            <li>Responsibility or achievement #3</li>
+          </ul>
+        </div>
+
+        <div class="mb-3">
+          <h5 class="mb-0">Job Title – Company Name</h5>
+          <small class="text-muted">Start Date – End Date</small>
+          <ul class="mt-1">
+            <li>Responsibility or achievement #1</li>
+            <li>Responsibility or achievement #2</li>
+          </ul>
+        </div>
+
+      </section>
+
+      <!-- Skills -->
+      <section>
+        <h4 class="mb-2 border-bottom pb-1">Skills</h4>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge bg-primary">Skill 1</span>
+          <span class="badge bg-primary">Skill 2</span>
+          <span class="badge bg-primary">Skill 3</span>
+          <span class="badge bg-primary">Skill 4</span>
+          <span class="badge bg-primary">Skill 5</span>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+✅ Features:
+
+Uses Bootstrap cards for a clean layout.
+
+Responsive container: works on mobile and desktop.
+
+Badges for skills make them pop visually.
+
+Uses border-bottom for section headers for a professional look.
+
+Minimal CSS needed; all styling is from Bootstrap.
+
+If you want, I can make an even sleeker two-column layout where your skills and contact info are on the left, and experience/education on the right, which is closer to professional resume templates you see online.
+
+Do you want me to do that version too?
